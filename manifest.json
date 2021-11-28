@@ -1,0 +1,33 @@
+{
+    "name": "Spotlight",
+    "version": "1.0",
+    "description": "Supercharged omnibox for search, bookmarks, tabs, history, downloads, and more.",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "commands": {
+        "launch": {
+            "suggested_key": {
+                "default": "Ctrl+Period"
+            },
+            "description": "Launch Spotlight."
+        }
+    },
+    "web_accessible_resources": [
+        "search.html"
+    ],
+    "manifest_version": 2
+}
